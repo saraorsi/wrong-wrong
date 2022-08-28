@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 2rem;
+            font-size: 2rem;
+            text-align: center;
+            line-height: 1.5;
+            background-color: rgba(0, 255, 255, 0.2);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .container {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .top {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            color: blue;
+            z-index: 1;
+        }
+
+        .bottom {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            color: #FFCCFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="top">
+            <span class="item-0">Entre</span> <span class="item-1">nós</span> e o <span class="item-2">mundo</span>,
+            <span class="item-3">entre</span> <span class="item-4">nós</span> e <span class="item-5">todas as
+                coisas</span> do <span class="item-6">mundo</span>, <span class="item-7">inclusive</span> <span
+                class="item-8">entre</span> <span class="item-9">nós</span> e as <span class="item-10">nossas</span>
+            <span class="item-11">ideias</span> e <span class="item-12">pensamentos</span>, <span
+                class="item-13">está</span> a linguagem.
+        </div>
+
+        <div class="bottom">
+            Entre nós e o mundo, entre nós e todas as coisas do mundo, inclusive entre nós e as nossas ideias e pensamentos, está a linguagem.
+        </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function () {
+
+            function changeWords(){
+                const wordsOption = [
+                    ['Entre', 'Fora'],
+                    ['eu', 'ti', 'nós'],
+                    ['nada', 'mundo'],
+                    ['entre', 'fora'],
+                    ['eu', 'ti', 'nós'],
+                    ['nenhuma coisa', 'todas as coisas'],
+                    ['nada', 'mundo'],
+                    ['tampouco', 'inclusive'],
+                    ['entre', 'fora'],
+                    ['eu', 'ti', 'nós'],
+                    ['vossas', 'nossas'],
+                    ['ideias', 'lacunas'],
+                    ['vazios', 'pensamentos']
+                ]
+
+                const i = Math.floor(Math.random() * wordsOption.length);
+
+                $(`.item-${i}`).fadeOut(1000, function () {
+                    $(this).text(wordsOption[i][Math.floor(Math.random() * wordsOption[i].length)]).fadeIn(1000);
+                });
+            }
+
+            setInterval(changeWords, 3000);
+        });
+
+    </script>
+</body>
+
+</html>
