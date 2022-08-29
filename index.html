@@ -53,7 +53,7 @@
 
 <body>
     <div class="container">
-        
+
         <div class="top">
             <span class="item-0">Entre</span> <span class="item-1">nós</span> e o <span class="item-2">mundo</span>,
             <span class="item-3">entre</span> <span class="item-4">nós</span> e <span class="item-5">todas as
@@ -64,7 +64,8 @@
         </div>
 
         <div class="bottom">
-            Entre nós e o mundo, entre nós e todas as coisas do mundo, inclusive entre nós e as nossas ideias e pensamentos, está a linguagem.
+            Entre nós e o mundo, entre nós e todas as coisas do mundo, inclusive entre nós e as nossas ideias e
+            pensamentos, está a linguagem.
         </div>
 
     </div>
@@ -76,7 +77,7 @@
     <script>
         $(function () {
 
-            function changeWords(){
+            function changeWords() {
                 const wordsOption = [
                     ['Entre', 'Fora'],
                     ['eu', 'ti', 'nós'],
@@ -94,6 +95,12 @@
                 ]
 
                 const i = Math.floor(Math.random() * wordsOption.length);
+
+                const text = $(`.item-${i}`).text();
+
+                wordsOption[i] = $.grep(wordsOption[i], function (value) {
+                    return value != text;
+                });
 
                 $(`.item-${i}`).fadeOut(1000, function () {
                     $(this).text(wordsOption[i][Math.floor(Math.random() * wordsOption[i].length)]).fadeIn(1000);
