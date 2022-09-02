@@ -1,7 +1,3 @@
-# Editoriais
+# 2949120 de princípios
 
-Ao tomar-se o primeiro parágrafo do editorial (de Filipe Pinto) como um espaço para o exercício linguístico electrónico, procura-se novas leituras através de um algoritmo combinatório inspirado no gerador de cartas de amor de Christopher Strachey.
-
-
-
-
+Neste desdobramento de princípios, o primeiro parágrafo do editorial "LINGUAGRAFIA" de Filipe Pinto, é tomado como um espaço para o exercício linguístico electrónico, no qual, através de um algoritmo combinatório inspirado no gerador de cartas de amor de Christopher Strachey, procura-se novas e diferentes leituras. Não mais estática, vivemos na era da informação dinâmica, da linguagem dinâmica, da verdade dinâmica, numa era em que existe a possibilidade digital de alterar sem rasurar. Sem rastos, sem pontos de referências perdemo-nos em novas possibilidades de significados. Assim e invertendo o caminho, nestes vários princípios permanece em sombra a origem, para que nos possamos perder e voltar a encontrar. 
