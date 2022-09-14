@@ -10,14 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
-        * {
+       * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            padding: 2rem;
             font-size: 2rem;
+            padding: 0 2rem;
             text-align: center;
             line-height: 1.5;
             background-color: rgba(0, 255, 255, 0.2);
@@ -28,6 +29,7 @@
             position: relative;
             max-width: 700px;
             margin: 0 auto;
+            height: 500px;
         }
 
         .top {
@@ -38,6 +40,8 @@
             left: 0;
             color: blue;
             z-index: 1;
+            display: flex;
+            align-items: center;
         }
 
         .bottom {
@@ -47,6 +51,14 @@
             bottom: 0;
             left: 0;
             color: #FFCCFF;
+            display: flex;
+            align-items: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+            :root{
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -54,12 +66,14 @@
 <body>
     <div class="container">
         <div class="top">
+            <div>
             <span class="item-0">Entre</span> <span class="item-1">nós</span> e o <span class="item-2">mundo</span>,
             <span class="item-3">entre</span> <span class="item-4">nós</span> e <span class="item-5">todas as
                 coisas</span> do <span class="item-6">mundo</span>, <span class="item-7">inclusive</span> <span
                 class="item-8">entre</span> <span class="item-9">nós</span> e as <span class="item-10">nossas</span>
             <span class="item-11">ideias</span> e <span class="item-12">pensamentos</span>, <span
                 class="item-13">está</span> a linguagem.
+            </div>
         </div>
 
         <div class="bottom">
@@ -78,7 +92,6 @@
 
 
         $(function () {
-
         
             
             function changeWords() {
